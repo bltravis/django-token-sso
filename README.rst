@@ -12,11 +12,11 @@ Installation
 Dependencies
 ------------
 
-:PyCrypto: https://www.dlitz.net/software/pycrypto/
+* [PyCrypto](https://www.dlitz.net/software/pycrypto/ "PyCrypto Homepage")
 
-:django.contrib.auth: https://docs.djangoproject.com/en/1.3/topics/auth/ "Django Auth Documentation"
+* [django.contrib.auth](https://docs.djangoproject.com/en/1.3/topics/auth/ "Django Auth Documentation")
 
-:django.contrib.sessions: https://docs.djangoproject.com/en/1.3/topics/http/sessions/ "Django Session Documentation"
+* [django.contrib.sessions](https://docs.djangoproject.com/en/1.3/topics/http/sessions/ "Django Session Documentation")
 
 
 More coming soon.
