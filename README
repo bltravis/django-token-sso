@@ -12,15 +12,16 @@ Installation
 Dependencies
 ------------
 
-[PyCrypto](https://www.dlitz.net/software/pycrypto/ "PyCrypto Home Page")
+:PyCrypto: https://www.dlitz.net/software/pycrypto/
 
-[django.contrib.auth](https://docs.djangoproject.com/en/1.3/topics/auth/ "Django Auth Documentation")
+:django.contrib.auth: https://docs.djangoproject.com/en/1.3/topics/auth/ "Django Auth Documentation"
 
-[django.contrib.sessions](https://docs.djangoproject.com/en/1.3/topics/http/sessions/ "Django Session Documentation")
+:django.contrib.sessions: https://docs.djangoproject.com/en/1.3/topics/http/sessions/ "Django Session Documentation"
+
 
 More coming soon.
 
 Required Settings
 -----------------
 
-`SSO_TOKEN_EXPIRES`: Time after which token is no longer valid (in seconds). Default is 5.
+``SSO_TOKEN_EXPIRES``: Time after which token is no longer valid (in seconds). Default is 5.
