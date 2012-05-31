@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login
 from django.http import HttpResponseBadRequest, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.utils.http import urlquote
 from token_sso.models import Token, SiteSSOSettings
 from token_sso.util import secure_required, gen_token
+from token_sso.backend import authenticate
 
 @secure_required    
 @login_required
@@ -17,7 +18,7 @@ def auth_redirect(request, referrer_id=None):
         token_hash = gen_token(request.user, site)
         token = Token(user=request.user, site=site, token=token_hash)
         token.save()
-        consumer_url = 'https://' + site.domain + SiteSSOSettings.objects.get(site=site)
+        consumer_url = 'https://' + site.domain + SiteSSOSettings.objects.get(site=site).url
         if request.REQUEST.has_key('next'):
             next = request.REQUEST['next']
             return HttpResponseRedirect('%s%s/?next=%s' % (consumer_url, token, next))
